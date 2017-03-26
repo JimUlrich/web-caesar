@@ -18,3 +18,10 @@ def rotate(char, rot):
             return lower[new_pos]
         elif char in upper:
             return upper[new_pos]
+
+def encrypt(text, rot):
+    message = ''
+    for char in text:
+        newchar = rotate(char, rot)
+        message += newchar
+    return message
